@@ -7,7 +7,7 @@ mapStateToProps=(state)=>{
 }
 
 mapDispatchToPRops{
-  setMessage()
+  setMessage,
 }
 
 

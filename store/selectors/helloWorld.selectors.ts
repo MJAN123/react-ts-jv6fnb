@@ -3,7 +3,7 @@ import createSelector from "../../utils/reselect";
 
 export const getHelloWorld = (state: any) => {
   const { helloWorld } = state;
-  return helloWorld || list();
+  return helloWorld || List();
 };
 
 export const getMessage = createSelector(

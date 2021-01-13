@@ -3,13 +3,13 @@ import HelloWorld from "./HelloWorld";
 import { setMessageBegin } from "../../store/actions/helloWorld.actions";
 import { getMessage } from "../../store/selectors/helloWorld.selectors";
 
-mapStateToProps = state => {
+const mapStateToProps = state => {
   // get data from state here
   const message = getMessage(state);
   return message;
 };
 
-mapDispatchToProps = {
+const mapDispatchToProps = {
   setMessageBegin
 };
 

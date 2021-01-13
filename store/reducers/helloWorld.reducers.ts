@@ -7,12 +7,14 @@ const HELLO_WORLD_STATE = fromJS({
   error: ""
 });
 export const helloWorldReducer = (state = HELLO_WORLD_STATE, actions: any) => {
-  switch (action.type) {
+  switch (actions.type) {
     case ACTIONS.HELLO_WORLD.PENDING:
+      debugger;
       return state.set("loading", true);
     case ACTIONS.HELLO_WORLD.SUCCESS:
-      return state.set("message", action.message);
+      debugger;
+      return state.set("message", actions.message);
     case ACTIONS.HELLO_WORLD.ERROR:
-      return state.set("error", action.error);
+      return state.set("error", actions.error);
   }
 };

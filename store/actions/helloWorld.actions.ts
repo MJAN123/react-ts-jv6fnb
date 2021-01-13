@@ -1,19 +1,20 @@
-import ACTIONS from '../../utils/projectName.constants'
+import ACTIONS from "../../utils/projectName.constants";
 
-export const setMessage={
-  pending: ()=>({
+export const setMessage = {
+  pending: () => ({
     type: ACTIONS.HELLO_WORLD.PENDING
   }),
-  success: (message: string)=>({
+  success: (message: string) => ({
     type: ACTIONS.HELLO_WORLD.SUCCESS,
-    response,
+    message
   }),
-  error: (error: string)=>({
+  error: (error: string) => ({
     type: ACTIONS.HELLO_WORLD.ERROR,
     error
-  }),
-}
+  })
+};
 
-export const setMessageBegin=()=>({
-  type: ACTIONS.HELLO_WORLD_BEGIN
-})
+export const setMessageBegin = (message: string) => ({
+  type: ACTIONS.HELLO_WORLD_BEGIN,
+  message
+});

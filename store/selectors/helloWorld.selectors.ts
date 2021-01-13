@@ -9,6 +9,6 @@ export const getHelloWorld = (state: any) => {
 export const getMessage = createSelector(
   getHelloWorld,
   data => {
-    return data.get("message");
+    return data.getIn(["helloWorld", "message"]);
   }
 );

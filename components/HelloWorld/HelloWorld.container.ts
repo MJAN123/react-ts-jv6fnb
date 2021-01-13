@@ -1,16 +1,19 @@
-import {connect} from 'react-redux'
-import HelloWorld from './HelloWorld'
-import {setMessage} from './../store/action/helloWorld.actions'
+import { connect } from "react-redux";
+import HelloWorld from "./HelloWorld";
+import { setMessageBegin } from "../../store/actions/helloWorld.actions";
+import { getMessage } from "../../store/selectors/helloWorld.selectors";
 
-mapStateToProps=(state)=>{
+mapStateToProps = state => {
   // get data from state here
-}
+  const message = getMessage(state);
+  return message;
+};
 
-mapDispatchToPRops{
-  setMessage,
-}
+mapDispatchToProps = {
+  setMessageBegin
+};
 
-
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(HelloWorld)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HelloWorld);

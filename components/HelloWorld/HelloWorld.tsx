@@ -12,5 +12,4 @@ const HelloWorld=(props:HelloWorldProps)=>{
     </div>
   )
 }
-
-export defualt HelloWorld
+export default HelloWorld;
